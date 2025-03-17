@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom"; // Import Outlet
-import { supabase } from "./lib/supabase";
-import Sidebar from "./components/Sidebar";
+import { supabase } from "./src/lib/supabase";
+import Sidebar from "./src/components/Sidebar";
 import { useSettingsStore } from "./store/settings";
-import { usePostsStore } from "./store/posts";
+import { usePostsStore } from "./src/store/posts";
 import { debounce } from "lodash";
-import { toast } from "./hooks/use-toast";
-import Header from "./components/Header";
+import { toast } from "./src/hooks/use-toast";
+import Header from "./src/components/Header";
 
 function AppLayout() {
   const { theme, density, animations } = useSettingsStore((state) => ({

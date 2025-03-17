@@ -14,9 +14,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const sentiment = new Sentiment();
 // Initialize Gemini AI client
-const genAI = new GoogleGenerativeAI("AIzaSyCpEpuWarkbYHyt7U8XG_9vhi7Wsy5sbJU");
+const genAI = new GoogleGenerativeAI("");
 const fileManager = new GoogleAIFileManager(
-  "AIzaSyCpEpuWarkbYHyt7U8XG_9vhi7Wsy5sbJU"
+  ""
 );
 
 // Session manager to store conversation history
