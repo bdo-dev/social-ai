@@ -1,0 +1,59 @@
+### Fetch Posts from Facebook Graph API
+GET http://localhost:3000/getposts
+
+### Fetch Posts with Specific Fields
+GET https://graph.facebook.com/v15.0/510008268858718/posts?fields=id,message&access_token=EAAX2xujI3ngBOZCM7IZBRbhNfHi6BZAzGgPSlxyXRuvwj78QuZC9fHgoXwKa7H8BFHaSUavrYnYDk82JfWk2xvGT9ZC8x8zrDJmHCQtjL0rr6Q4uE01yiV3dnWFh1OQSMZCW67CUZAHgBGMwOSsIi5zwp56XnZBatZB8LkZCHHZASV3l7mZBID9PyO5MNZCcZCe0EbRFZCjYA2dZBxjVVb58cYSAFCpWtBeN9hwZD
+
+
+### Create a New Post on Facebook
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+  "message": "This is a test post from laptop agin!" 
+}
+
+### Delete a Post
+DELETE http://localhost:3000/deletepost/510008268858718_122093182916652867
+
+
+### Get a Specific Post
+GET http://localhost:3000/getpost/510008268858718_122110316540652867
+
+### Edit a Post
+PUT http://localhost:3000/editpost/510008268858718_122110316540652867
+Content-Type: application/json
+
+{
+  "message": "this post is updated"
+}
+
+### Get a all the comments
+GET http://localhost:3000/comments/510008268858718_122110476434652867
+
+
+GET http://localhost:3000/comments/510008268858718_122110476434652867
+
+
+
+### analyze the comment
+POST http://localhost:3000/analyzecomment
+Content-Type: application/json
+
+{
+  "comment": "i hate you" 
+}
+
+
+### Fetch all posts
+GET http://localhost:3000/posts
+
+###
+POST http://localhost:3000/api/chat/text
+Content-Type: application/json
+
+{
+  "message": "i love you",
+  "userId": "12345",
+  "prompt": "answer with only one words"
+}
