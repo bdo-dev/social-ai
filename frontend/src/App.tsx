@@ -1,18 +1,18 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { supabase } from "./src/lib/supabase";
-import Sidebar from "./src/components/Sidebar";
-import Posts from "./src/pages/Posts";
+import { supabase } from "./lib/supabase";
+import Sidebar from "./components/Sidebar";
+import Posts from "./pages/Posts";
 
 import Comments from "./pages/Comments";
 import Chatbot from "./pages/Chatbot";
 
-import { usePostsStore } from "./src/store/posts";
-import AuthForm from "./src/components/AuthForm";
-import Header from "./src/components/Header";
+import { usePostsStore } from "./store/posts";
+import AuthForm from "./components/AuthForm";
+import Header from "./components/Header";
 import { debounce } from "lodash";
 import { ToastWrapper } from "@/components/ui/toast-provider"; // Import ToastWrapper
-import { toast } from "./src/hooks/use-toast"; // Import toast function
+import { toast } from "./hooks/use-toast"; // Import toast function
 
 function AppContent() {
   
